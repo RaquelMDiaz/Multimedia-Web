@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Multimedia Web Project | Marburg University</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Custom Theme files -->
+		<link href="css/theme-style.css" rel='stylesheet' type='text/css' />
+   		<!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----font-Awesome----->
+   		<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+   		<!----font-Awesome----->
+		<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+
+			$(document).ready(function() {
+						$('a.overlay-link').click(function() {
+							var my_overlay_id = $($(this).attr('rel'));
+							my_overlay_id.prepend('<div class="overlay-close"></div>').show();
+							$(document).on('click', '.overlay-close', function() {
+							my_overlay_id.hide();
+							});
+						});
+						$('a.overlay-link').click(function(e) {
+							// Cancel the default action
+							e.preventDefault();
+						});
+					});
+		</script>
+		<!----//End-top-nav-script---->
+		<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			<!---- Slider ------>
+	<link rel="stylesheet" href="css/slider.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery.cslider.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+	<script type="text/javascript">
+			$(function() {
+			
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+			
+			});
+		</script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$('#da-slider1').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+			
+			});
+		</script>	
+	</head>
+	<body>
+		<!-- start-top-header -->
+		<div id="hello" class="top-header">
+			<!-- Slideshow 4 -->
+			    <div id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			          <img src="images/slide1.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<h1>A Glance On Argetine Spanish</h1>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/slide2.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<h1>By Raquel D&iacute;az</h1>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/slide3.jpg" alt="">
+			           <div class="caption text-center">
+			           	<div class="slide-text-info">
+			          		<h1>Capture the essence of Buenos Aires</h1>
+			          	</div>
+			          </div>
+			        </li>
+			      </ul>
+			    </div>
+			    <div class="clear"> </div>
+			<!-- End-slider -->
+			<!-- start-conatiner -->
+			<div class="container">
+				<!-- start-header -->
+				<div class="header">
+					<div class="container">
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<!-- originally class="active" at a tag hello -->
+								<li><a href="#hello" class="scroll">Hello</a></li>
+								<li class="page-scroll"><a href="#over" class="scroll">Overview</a></li>
+								<li class="page-scroll"><a href="#gall" class="scroll">Sounds</a></li>
+								<li class="page-scroll"><a href="#fea" class="scroll">Backstage</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						  </nav>
+						
+						<div class="clear"> </div>
+					</div>
+				<!-----//End-header---->
+				</div>
+				<!-----start-top-header----->
+			</div>
+		</div>
+		<!-----start-features----->
+		<div id="over" class="features text-center">
+			<div class="container">
+				<h2>Overview</h2>
+				<!---- start-features-grids------>
+					<div class="features-grids text-center">
+						<div class="col-md-4 features-grid">
+							<div class="col-md-5 Share-instantly-left">
+							<span> </span>
+							</div>
+						</div>
+						<div class="col-md-4 features-grid">
+							<p>
+								As we all know, Spanish is one of the most widely spoken languages in the world, either as a mother tongue or as a 
+								second language. With Spain as its &quot;Mecca&quot;, this rather pluricentric language spreads further on up to 
+								the other side of the ocean, onto the vast lands of Central and South America.<br/>
+								Its history traces back to the Indo European family and runs through Latin. Although there are no clear-cut dates, 
+								standard Spanish is considered to have been made popular by Alfonso X, king of Castile and Leon (1252-1284). 
+								During his reign, Latin as the vernacular of certain administrative documents was replaced by more dialectal 
+								versions of Spanish. During the fifteenth and sixteenth centuries, the Spanish Crown embarked itself on several expeditions overseas. 
+								The main spots worldwide that received the Spanish conquerors were the Canaries, America, the Mediterranean and 
+								the Balkans, and the Philippines. 
+							</p>
+						</div>
+						<div class="col-md-4 features-grid">
+							<p>
+								Along with these people came the language to what later on came to be the 
+								Argentine Republic.
+								Now all of this happened hundreds of years ago. But what about now? Right now the Spanish language looks somehow 
+								like this:
+							</p>
+							<p id="special">
+								it's basically an SVO language<br/>
+								there are prepositions... many!<br/>
+								it's a NOUN-ADJECTIVE language, unless we want to get really poetical<br/>
+								it's a NOUN-GENITIVE language, and there's nothing poetry can do about it<br/>
+								it's strongly suffixing, I mean it<br/>
+							</p>
+							<p>
+								So basically Spanish speakers are all over the world, but here we will focus on one of the spots in South America: 
+								<em>Argentina</em>. More precisely, on the place where standard Argentine Spanish is nowadays considered to be 
+								spoken: Buenos Aires.
+							</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				<!---- //End-features-grids------>
+			</div>
+		</div>
+		<!-----//End-features----->
+					 <!-- Prettify -->
+						<link href="css/owl.carousel.css" rel="stylesheet">
+					    <script src="js/owl.carousel.js"></script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo , #owl-demo1").owlCarousel({
+						        items : 1,
+						        lazyLoad : true,
+						        autoPlay : true,
+						      });
+						    });
+					    </script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo3").owlCarousel({
+						        items : 4,
+						        lazyLoad : true,
+						        autoPlay : true,
+						        navigation: false,
+						        pagination: false,
+						      });
+						    });
+					    </script>
+		<!-- start-gallery -->
+		<div id="gall" class="gallery">
+			<div class="container">
+				<h3>Sounds</h3>
+				<p>
+					There are some aspects that differenciate Argentine Spanish from that which is spoken in the rest of the Spanish-speaking 
+					world. And what's better than actually listening to -at least- some of them?
+				</p>
+			</div>
+			<div id="owl-demo3" class="owl-carousel owl-carousel2">
+				<div class="item">
+					<img class="lazyOwl" data-src="images/g1.jpg" alt="Lazy Owl Image" />
+				    <p class="img_slider"><span class="g-title">S | C | Z</span>
+					<a href="#" rel="#overlay1" class="overlay-link" class="likes"><i class="fa fa-heart"> </i>+ More</a></p>
+				</div>
+				<div class="item">
+				    <img class="lazyOwl" data-src="images/g2.png" alt="Lazy Owl Image">
+					<p class="img_slider"><span class="g-title">ASPIRATED <i>S</i></span>
+					<a href="#" rel="#overlay2" class="overlay-link" class="likes"><i class="fa fa-heart"> </i>+ More</a></p>
+				</div>
+				<div class="item">
+					<img class="lazyOwl" data-src="images/g3.jpeg" alt="Lazy Owl Image">
+				    <p class="img_slider"><span class="g-title">B | V</span>
+					<a href="#" rel="#overlay3" class="overlay-link" class="likes"><i class="fa fa-heart"> </i>+ More</a></p>
+				</div>
+				<div class="item">
+					<img class="lazyOwl" data-src="images/g4.jpg" alt="Lazy Owl Image">
+					<p class="img_slider"><span class="g-title">VOWELS</span>
+					<a href="#" rel="#overlay4" class="overlay-link" class="likes"><i class="fa fa-heart"> </i>+ More</a></p>
+				</div>
+				<div class="item">
+					<img class="lazyOwl" data-src="images/g5.jpg" alt="Lazy Owl Image">
+				    <p class="img_slider"><span class="g-title">THE NUMBERS</span>
+					<a href="#" rel="#overlay5" class="overlay-link" class="likes"><i class="fa fa-heart"> </i>+ More</a></p>
+				</div>
+                <div class="clearfix"> </div>	                
+			</div>
+			<!-- OVERLAY1 -->
+			<div id="overlay1" class="overlay1">
+				<h2>S | C | Z</h2>
+				<p>
+					As opposed to the Spanish spoken in Spain, in Argentina both &quot;s&quot;, &quot;c&quot; and &quot;z&quot; 
+					are pronounced in the same way, namely [s]. Let's listen to this aspect in the words &quot;caza&quot;, 
+					meaning &quot;hunt.PRES.1.SG&quot;, and &quot;casa&quot;, meaning &quot;house&quot;.<br/>
+					<audio controls="controls">
+						<source src="audio/caza_casa.mp3" type="audio/mpeg">
+						<source src="audio/caza_casa.ogg" type="audio/ogg">
+						Your browser does not support HTML 5 audio elements.
+					</audio>
+				</p>
+				<p>
+					<audio controls="controls">
+						<source src="audio/caza_casa.mp3" type="audio/mpeg">
+						<source src="audio/caza_casa.ogg" type="audio/ogg">
+						Your browser does not support HTML 5 audio elements.
+					</audio>
+				</p>
+			</div>
+			<!-- OVERLAY1 -->
+			<!-- OVERLAY2 -->
+			<div id="overlay2" class="overlay2">
+				<h2>ASPIRATED <i>S</i></h2>
+				<p>
+					Every so often it happens that an [s] is cought in between an open vowel, such as [o] and a velar plosive, 
+					such as [k]. For Argentine speakers it is much more comfortable to produce an aspiration, and realize the 
+					sound as [h], rather than to pronounce an actual [s]. But don't take my words, better listen to the word 
+					&quot;bosque&quot;, which means &quot;forest&quot;.<br/>
+					<audio controls="controls">
+						<source src="audio/bosque.mp3" type="audio/mpeg">
+						<source src="audio/bosque.ogg" type="audio/ogg">
+						Your browser does not support HTML 5 audio elements.
+					</audio>
+				</p>
+			</div>
+			<!-- OVERLAY2 -->
+			<!-- OVERLAY3 -->
+			<div id="overlay3" class="overlay3">
+				<h2>B | V</h2>
+				<p>
+					Something that saves Spanish techers loads of corrections when pronounciation is at stake is that there's no 
+					diference between the letters &quot;v&quot; and &quot;b&quot;. Listen to the words &quot;vaca&quot;, 
+					meaning &quot;cow&quot; and &quot;boca&quot;, meaning &quot;mouth&quot;.<br/>
+					<audio controls="controls">
+						<source src="audio/vaca.mp3" type="audio/mpeg">
+						<source src="audio/vaca.ogg" type="audio/ogg">
+						Your browser does not support HTML 5 audio elements.
+					</audio>
+				</p>
+				<p>
+					<audio controls="controls">
+						<source src="audio/boca.mp3" type="audio/mpeg">
+						<source src="audio/boca.ogg" type="audio/ogg">
+						Your browser does not support HTML 5 audio elements.
+					</audio>
+				</p>
+			</div>
+			<!-- OVERLAY3 -->
+			<!-- OVERLAY4 -->
+			<div id="overlay4" class="overlay4">
+				<h2>VOWELS</h2>
+				<p>
+					Now that we've pointed out some consonantal variations, let me show you the vowel charts: from left to right, 
+					monophthongs and diphthongs.
+				</p>
+				<div>
+					<table>
+						<tr>
+							<td><img src="images/monophthongs.png" width="345" height="250"/></td>
+							<td><img src="images/diphthongs.png" width="345" height="250"/></td>
+						</tr>
+					</table>
+				</div>
+				<p>You might be thinking Spanish has only too many diphthongs, well you're right!</p>
+			</div>
+			<!-- OVERLAY4 -->
+			<!-- OVERLAY5 -->
+			<div id="overlay5" class="overlay5">
+				<h2>THE NUMBERS</h2>
+				<p>
+					But let me leave you off for now with something simpler and funnier: the numbers.
+				</p>
+				<p>
+					<ol id="list_numbers">
+						<li>
+							<audio controls="controls">
+								<source src="audio/1.mp3" type="audio/mpeg">
+								<source src="audio/1.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/2.mp3" type="audio/mpeg">
+								<source src="audio/2.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/3.mp3" type="audio/mpeg">
+								<source src="audio/3.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/4.mp3" type="audio/mpeg">
+								<source src="audio/4.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/5.mp3" type="audio/mpeg">
+								<source src="audio/5.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/6.mp3" type="audio/mpeg">
+								<source src="audio/6.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/7.mp3" type="audio/mpeg">
+								<source src="audio/7.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/8.mp3" type="audio/mpeg">
+								<source src="audio/8.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/9.mp3" type="audio/mpeg">
+								<source src="audio/9.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+						<li>
+							<audio controls="controls">
+								<source src="audio/10.mp3" type="audio/mpeg">
+								<source src="audio/10.ogg" type="audio/ogg">
+								Your browser does not support HTML 5 audio elements.
+							</audio>
+						</li>
+					</ol>
+				</p>
+			</div>
+			<!-- OVERLAY5 -->
+		</div>
+		<!----- //End-gallery----->
+		<!-----start-New Feature------>
+		<div id="fea" class="feature">
+			<div class="container">
+				<div class="col-md-7 feature-left">
+					<h3>Backstage</h3>
+					<p class="head-para">
+						Find me online. Ask questions. Interact.
+					</p>
+					<div class="slider">
+						<div id="da-slider1" class="da-slider1">
+								<div class="da-slide">
+									<div class="da-img"><img src="images/facebook.png" class="img-responsive" alt=" " /></div>
+									<div class="slide-text">
+										<p><a href="https://www.facebook.com/" target="blank">
+											Facebook
+										</a></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="da-slide">
+									<div class="da-img"><img src="images/twitter.png" class="img-responsive" alt=" " /></div>
+									<div class="slide-text">
+										<p><a href="https://twitter.com/Raquel_M_Diaz" target="blank">
+											Twitter
+										</a></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="da-slide">
+									<div class="da-img"><img src="images/instagram.png" class="img-responsive" alt=" " /></div>
+									<div class="slide-text">
+										<p><a href="https://www.instagram.com/raquelmarianadiaz/" target="blank">
+											Instagram
+										</a></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="da-slide">
+									<div class="da-img"><img src="images/wordpress.png" class="img-responsive" alt=" " /></div>
+									<div class="slide-text">
+										<p><a href="https://raquelmarianadiaz.wordpress.com/" target="blank">
+											Wordpress
+										</a></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="da-slide">
+									<div class="da-img"><img src="images/linkedin.png" class="img-responsive" alt=" " /></div>
+									<div class="slide-text">
+										<p><a href="https://www.linkedin.com/profile/preview?locale=es_ES&trk=prof-0-sb-preview-primary-button" target="blank">
+											LinkedIn
+										</a></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 feature-right">
+					 <span> </span>
+				</div>
+			</div>
+		</div>
+		<!-----//End-New Feature------>
+		<!-----start-footer----->
+		<div class="footer">
+			<div class="container">
+				<div class="col-md-7 footer-left">
+					<p>By <a href="https://raquelmarianadiaz.wordpress.com/" target="blank">Raquel D&iacute;az</a></p>
+				</div>
+				<div class="col-md-5 footer-right text-left">
+					<p>Subscribe my email newsletter.</p>
+					<form>
+						<input type="text" value="Your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email';}">
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<a href="#top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			<!---- start-smoth-scrolling---->
+			<script type="text/javascript">
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			
+				      var target = $(this.hash);
+				      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				      if (target.length) {
+				        $('html,body').animate({
+				          scrollTop: target.offset().top
+				        }, 1000);
+				        return false;
+				      }
+				    }
+				  });
+					});
+			</script>
+			<!---- //End-smoth-scrolling---->
+		</div>
+		<!-----//End-footer----->
+		<!-----//End-conatiner---->
+	</body>
+</html>
